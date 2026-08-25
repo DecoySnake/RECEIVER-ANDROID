@@ -17,10 +17,12 @@ BASE_W,BASE_H=1080,1920
 SCALE=min(W/BASE_W,H/BASE_H)
 def sc(v): return max(1,int(v*SCALE))
 
-SMALL=pygame.font.SysFont("consolas",sc(22))
-FONT=pygame.font.SysFont("consolas",sc(28))
-BIG=pygame.font.SysFont("consolas",sc(42),bold=True)
-HUGE=pygame.font.SysFont("consolas",sc(55),bold=True)
+SMALL=pygame.font.Font(None,sc(22))
+FONT=pygame.font.Font(None,sc(28))
+BIG=pygame.font.Font(None,sc(42))
+HUGE=pygame.font.Font(None,sc(55))
+BIG.set_bold(True)
+HUGE.set_bold(True)
 
 BG=(7,9,12); PANEL=(17,22,25); PANEL2=(26,34,38)
 TXT=(194,231,207); DIM=(91,125,110); WHITE=(235,245,239)
